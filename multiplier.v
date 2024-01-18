@@ -73,7 +73,7 @@ module unit_multiplier #(
     input [WIDTH-1:0] A,
     input [WIDTH-1:0] B,
     input S,
-    output reg [2*WIDTH-1:0] Y
+    output [2*WIDTH-1:0] Y
 );
 
 // x, y order
@@ -155,7 +155,7 @@ module multiplier
     input [7:0] B,
     input S,
     input V,
-    output reg [15:0] Y
+    output [15:0] Y
 );
 
 wire [15:0] Y_nonvectorized, Y_vectorized;

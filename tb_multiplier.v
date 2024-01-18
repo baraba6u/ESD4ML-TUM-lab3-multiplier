@@ -17,10 +17,11 @@ module tb_multiplier;
 // multiplier
 reg [7:0] A, B;
 reg S, V;
-reg [15:0] Y_ref, Y;
+wire [15:0] Y_ref, Y;
 
 // FA
-reg a, b, cin, s, cout, s_ref, cout_ref;
+reg a, b, cin;
+wire s, cout, s_ref, cout_ref;
 
 FA fa0(
     .a(a),
