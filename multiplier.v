@@ -84,7 +84,7 @@ generate
     for (i = 0; i < WIDTH; i = i + 1) begin
         for (j = 0; j < WIDTH; j = j + 1) begin
             if ((j == WIDTH-1 && i != WIDTH-1) || (i == WIDTH-1 && j != WIDTH-1)) begin
-                assign and_array[i][j] = (S == 1'b1) ? ~(A[i] & B[j]) : A[i] & B[j];
+                assign and_array[i][j] = S ? ~(A[i] & B[j]) : A[i] & B[j];
             end
             else begin
                 assign and_array[i][j] = A[i] & B[j];
